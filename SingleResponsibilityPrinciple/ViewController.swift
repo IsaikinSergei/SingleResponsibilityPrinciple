@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     let urlFreeApp = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/10/explicit.json"
     
+    let urlNewGames = "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/10/explicit.json"
     // внешние зависимости
 //    var networkService = NetworkService()
     var networkDataFetcher = NetworkDataFetcher()
@@ -28,6 +29,10 @@ class ViewController: UIViewController {
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
 //        dataFetcher()
+        
+        networkDataFetcher.fetchNewGames(urlString: urlNewGames) { (newGames) in
+            print(newGames?.feed.results.first?.name)
+        }
         
         networkDataFetcher.fetchFreeApp(urlString: urlFreeApp) { (freeApp) in
             print(freeApp?.feed.results.first?.name)

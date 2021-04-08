@@ -15,11 +15,20 @@ class NetworkDataFetcher {
         self.networkService = networkService
     }
     
-    func fetchFreeApp(urlString: String, completion: @escaping([AppGroup]?) -> Void) {
+    func fetchNewGames(urlString: String, completion: @escaping(AppGroup?) -> Void) {
         networkService.request(urlString: urlString) { (data, error) in
             let decoder = JSONDecoder()
             guard let data = data else { return }
-            guard let response = try? decoder.decode([AppGroup].self, from: data) else { return }
+            guard let response = try? decoder.decode(AppGroup.self, from: data) else { return }
+            completion(response)
+        }
+    }
+    
+    func fetchFreeApp(urlString: String, completion: @escaping(AppGroup?) -> Void) {
+        networkService.request(urlString: urlString) { (data, error) in
+            let decoder = JSONDecoder()
+            guard let data = data else { return }
+            guard let response = try? decoder.decode(AppGroup.self, from: data) else { return }
             completion(response)
         }
     }
