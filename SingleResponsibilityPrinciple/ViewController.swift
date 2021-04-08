@@ -7,20 +7,15 @@
 
 import UIKit
 
-struct Emails: Decodable {
-    var postId: Int
-    var id: Int
-    var name: String
-    var email: String
-    var body: String
-}
-
 class ViewController: UIViewController {
     
     let urlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
     
+    let urlFreeApp = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/10/explicit.json"
+    
     // внешние зависимости
-    var networkService = NetworkService()
+//    var networkService = NetworkService()
+    var networkDataFetcher = NetworkDataFetcher()
     let dataStore = DataStore()
     
     // элементы пользовательского интерфейса
@@ -33,7 +28,14 @@ class ViewController: UIViewController {
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
 //        dataFetcher()
-        networkService.dataFetcher(urlString: urlString)
+        
+        networkDataFetcher.fetchFreeApp(urlString: urlFreeApp) { (freeApp) in
+            print(freeApp?.feed.results.first?.name)
+        }
+        
+        networkDataFetcher.fetchEmails(urlString: urlString) { (emails) in
+            print(emails?.first?.email)
+        }
     }
 
     // MARK: - Busines logic

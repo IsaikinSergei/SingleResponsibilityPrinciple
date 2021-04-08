@@ -15,6 +15,9 @@
 		EA0339042601F7B100963BB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0339022601F7B100963BB4 /* LaunchScreen.storyboard */; };
 		EA71FC58261F089900AEC5C5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC57261F089900AEC5C5 /* NetworkService.swift */; };
 		EA71FC5B261F0A1B00AEC5C5 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC5A261F0A1B00AEC5C5 /* DataStore.swift */; };
+		EA71FC5F261FA84B00AEC5C5 /* EmailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC5E261FA84B00AEC5C5 /* EmailsModel.swift */; };
+		EA71FC62261FA8AF00AEC5C5 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */; };
+		EA71FC6A261FB06500AEC5C5 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC69261FB06500AEC5C5 /* AppGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		EA0339052601F7B100963BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA71FC57261F089900AEC5C5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EA71FC5A261F0A1B00AEC5C5 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		EA71FC5E261FA84B00AEC5C5 /* EmailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailsModel.swift; sourceTree = "<group>"; };
+		EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		EA71FC69261FB06500AEC5C5 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +68,34 @@
 			children = (
 				EA0338F72601F7AD00963BB4 /* AppDelegate.swift */,
 				EA0338F92601F7AD00963BB4 /* SceneDelegate.swift */,
+				EA71FC66261FAAE600AEC5C5 /* Services */,
 				EA0338FB2601F7AD00963BB4 /* ViewController.swift */,
-				EA71FC57261F089900AEC5C5 /* NetworkService.swift */,
-				EA71FC5A261F0A1B00AEC5C5 /* DataStore.swift */,
 				EA0338FD2601F7AD00963BB4 /* Main.storyboard */,
 				EA0339002601F7B100963BB4 /* Assets.xcassets */,
 				EA0339022601F7B100963BB4 /* LaunchScreen.storyboard */,
 				EA0339052601F7B100963BB4 /* Info.plist */,
 			);
 			path = SingleResponsibilityPrinciple;
+			sourceTree = "<group>";
+		};
+		EA71FC64261FAABE00AEC5C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA71FC5E261FA84B00AEC5C5 /* EmailsModel.swift */,
+				EA71FC69261FB06500AEC5C5 /* AppGroup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA71FC66261FAAE600AEC5C5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA71FC64261FAABE00AEC5C5 /* Models */,
+				EA71FC57261F089900AEC5C5 /* NetworkService.swift */,
+				EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */,
+				EA71FC5A261F0A1B00AEC5C5 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,11 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA71FC62261FA8AF00AEC5C5 /* NetworkDataFetcher.swift in Sources */,
 				EA0338FC2601F7AD00963BB4 /* ViewController.swift in Sources */,
 				EA0338F82601F7AD00963BB4 /* AppDelegate.swift in Sources */,
+				EA71FC5F261FA84B00AEC5C5 /* EmailsModel.swift in Sources */,
 				EA71FC58261F089900AEC5C5 /* NetworkService.swift in Sources */,
 				EA71FC5B261F0A1B00AEC5C5 /* DataStore.swift in Sources */,
 				EA0338FA2601F7AD00963BB4 /* SceneDelegate.swift in Sources */,
+				EA71FC6A261FB06500AEC5C5 /* AppGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
