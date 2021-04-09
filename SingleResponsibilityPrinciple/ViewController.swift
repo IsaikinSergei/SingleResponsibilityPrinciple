@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         dataFetcherService.fetchNewGames { (newGames) in
             print(newGames?.feed.results.first?.name)
         }
+        
+        dataFetcherService.fetchLocalEmails { (localEmails) in
+            print(localEmails?.last?.email)
+        }
     }
 
     // MARK: - Busines logic

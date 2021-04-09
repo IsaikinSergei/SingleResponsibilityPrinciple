@@ -19,6 +19,8 @@
 		EA71FC62261FA8AF00AEC5C5 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */; };
 		EA71FC6A261FB06500AEC5C5 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC69261FB06500AEC5C5 /* AppGroup.swift */; };
 		EA71FC6D2620781B00AEC5C5 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC6C2620781B00AEC5C5 /* DataFetcherService.swift */; };
+		EA71FC702620F71E00AEC5C5 /* LocalDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC6F2620F71E00AEC5C5 /* LocalDataFetcher.swift */; };
+		EA71FC742620F90E00AEC5C5 /* UsersAPI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA71FC732620F90E00AEC5C5 /* UsersAPI.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		EA71FC69261FB06500AEC5C5 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EA71FC6C2620781B00AEC5C5 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		EA71FC6F2620F71E00AEC5C5 /* LocalDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataFetcher.swift; sourceTree = "<group>"; };
+		EA71FC732620F90E00AEC5C5 /* UsersAPI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UsersAPI.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,10 @@
 				EA71FC64261FAABE00AEC5C5 /* Models */,
 				EA71FC57261F089900AEC5C5 /* NetworkService.swift */,
 				EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */,
+				EA71FC6F2620F71E00AEC5C5 /* LocalDataFetcher.swift */,
 				EA71FC6C2620781B00AEC5C5 /* DataFetcherService.swift */,
 				EA71FC5A261F0A1B00AEC5C5 /* DataStore.swift */,
+				EA71FC732620F90E00AEC5C5 /* UsersAPI.txt */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			files = (
 				EA0339042601F7B100963BB4 /* LaunchScreen.storyboard in Resources */,
 				EA0339012601F7B100963BB4 /* Assets.xcassets in Resources */,
+				EA71FC742620F90E00AEC5C5 /* UsersAPI.txt in Resources */,
 				EA0338FF2601F7AD00963BB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +185,7 @@
 				EA71FC58261F089900AEC5C5 /* NetworkService.swift in Sources */,
 				EA71FC6D2620781B00AEC5C5 /* DataFetcherService.swift in Sources */,
 				EA71FC5B261F0A1B00AEC5C5 /* DataStore.swift in Sources */,
+				EA71FC702620F71E00AEC5C5 /* LocalDataFetcher.swift in Sources */,
 				EA0338FA2601F7AD00963BB4 /* SceneDelegate.swift in Sources */,
 				EA71FC6A261FB06500AEC5C5 /* AppGroup.swift in Sources */,
 			);

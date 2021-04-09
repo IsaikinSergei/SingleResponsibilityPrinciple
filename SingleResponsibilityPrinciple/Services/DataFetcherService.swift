@@ -9,28 +9,33 @@ import Foundation
 
 class DataFetcherService {
     
-    var dataFetcher: DataFetcher
+    var networkDataFetcher: DataFetcher
+    var localDataFetcher: DataFetcher
     
-    init(dataFetcher: DataFetcher = NetworkDataFetcher()) {
-        self.dataFetcher = dataFetcher
+    init(networkDataFetcher: DataFetcher = LocalDataFetcher(),localDataFetcher: DataFetcher = LocalDataFetcher() ) {
+        self.networkDataFetcher = networkDataFetcher
+        self.localDataFetcher = localDataFetcher
     }
     
     func fetchNewGames(completion: @escaping(AppGroup?) -> Void) {
         let urlNewGames = "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/10/explicit.json"
-        dataFetcher.fetchGenericJSONData(urlString: urlNewGames, response: completion)
+        networkDataFetcher.fetchGenericJSONData(urlString: urlNewGames, response: completion)
     }
     
     func fetchFreeApp(completion: @escaping(AppGroup?) -> Void) {
         let urlFreeApp = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/10/explicit.json"
-        dataFetcher.fetchGenericJSONData(urlString: urlFreeApp, response: completion)
+        networkDataFetcher.fetchGenericJSONData(urlString: urlFreeApp, response: completion)
         
     }
     
     func fetchEmails(completion: @escaping([Emails]?) -> Void) {
         let urlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
-        dataFetcher.fetchGenericJSONData(urlString: urlString, response: completion)
+        networkDataFetcher.fetchGenericJSONData(urlString: urlString, response: completion)
     }
     
-    
+    func fetchLocalEmails(completion: @escaping([Emails]?) -> Void) {
+        let localUrlString = "UsersAPI.txt"
+        networkDataFetcher.fetchGenericJSONData(urlString: localUrlString, response: completion)
+    }
     
 }
