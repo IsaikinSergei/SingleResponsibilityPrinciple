@@ -7,7 +7,11 @@
 
 import Foundation
 
-class NetworkService {
+protocol Networking {
+    func request(urlString: String, completion: @escaping (Data?, Error?) -> Void)
+}
+
+class NetworkService: Networking {
     
     // построение запроса данных по URL
     func request(urlString: String, completion: @escaping (Data?, Error?) -> Void) {

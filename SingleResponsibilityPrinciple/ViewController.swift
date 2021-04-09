@@ -9,14 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let urlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
-    
-    let urlFreeApp = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/10/explicit.json"
-    
-    let urlNewGames = "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/10/explicit.json"
     // внешние зависимости
 //    var networkService = NetworkService()
-    var networkDataFetcher = NetworkDataFetcher()
+    var dataFetcherService = DataFetcherService()
     let dataStore = DataStore()
     
     // элементы пользовательского интерфейса
@@ -28,18 +23,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         saveButton.layer.cornerRadius = saveButton.frame.width / 2
         
-//        dataFetcher()
-        
-        networkDataFetcher.fetchNewGames(urlString: urlNewGames) { (newGames) in
-            print(newGames?.feed.results.first?.name)
+        dataFetcherService.fetchEmails { (emails) in
+            print(emails?.first?.email)
         }
-        
-        networkDataFetcher.fetchFreeApp(urlString: urlFreeApp) { (freeApp) in
+        dataFetcherService.fetchFreeApp { (freeApp) in
             print(freeApp?.feed.results.first?.name)
         }
-        
-        networkDataFetcher.fetchEmails(urlString: urlString) { (emails) in
-            print(emails?.first?.email)
+        dataFetcherService.fetchNewGames { (newGames) in
+            print(newGames?.feed.results.first?.name)
         }
     }
 

@@ -18,6 +18,7 @@
 		EA71FC5F261FA84B00AEC5C5 /* EmailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC5E261FA84B00AEC5C5 /* EmailsModel.swift */; };
 		EA71FC62261FA8AF00AEC5C5 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */; };
 		EA71FC6A261FB06500AEC5C5 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC69261FB06500AEC5C5 /* AppGroup.swift */; };
+		EA71FC6D2620781B00AEC5C5 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71FC6C2620781B00AEC5C5 /* DataFetcherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EA71FC5E261FA84B00AEC5C5 /* EmailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailsModel.swift; sourceTree = "<group>"; };
 		EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		EA71FC69261FB06500AEC5C5 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		EA71FC6C2620781B00AEC5C5 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				EA71FC64261FAABE00AEC5C5 /* Models */,
 				EA71FC57261F089900AEC5C5 /* NetworkService.swift */,
 				EA71FC61261FA8AF00AEC5C5 /* NetworkDataFetcher.swift */,
+				EA71FC6C2620781B00AEC5C5 /* DataFetcherService.swift */,
 				EA71FC5A261F0A1B00AEC5C5 /* DataStore.swift */,
 			);
 			path = Services;
@@ -173,6 +176,7 @@
 				EA0338F82601F7AD00963BB4 /* AppDelegate.swift in Sources */,
 				EA71FC5F261FA84B00AEC5C5 /* EmailsModel.swift in Sources */,
 				EA71FC58261F089900AEC5C5 /* NetworkService.swift in Sources */,
+				EA71FC6D2620781B00AEC5C5 /* DataFetcherService.swift in Sources */,
 				EA71FC5B261F0A1B00AEC5C5 /* DataStore.swift in Sources */,
 				EA0338FA2601F7AD00963BB4 /* SceneDelegate.swift in Sources */,
 				EA71FC6A261FB06500AEC5C5 /* AppGroup.swift in Sources */,
